@@ -1,0 +1,15 @@
+Instalando Jquery - (se guarda en package.json / node_modules)
+-> npm i --save jquery 
+
+Entrar en angular.json para integrarlo al proyecto, ir a la parte de scripts, y poner la ruta de donde esta
+"scripts": [
+	"node_modules/jquery/dist/jquery.min.js"
+],
+
+Reiniciar serve
+
+dentro del componente importar 
+-> import $ from "jquery";
+-> declare var $:any;
+
+El resto de librerias lo que tengo que hacer es ubicarla dentro de angualr.json

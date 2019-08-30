@@ -1,0 +1,44 @@
+<div class="container">
+
+	<h1>Contacto</h1>
+
+	<!-- Seleccionar el DOM con ANGULAR, se le coloca el nombre con # -->
+	<div id="texto" #textos>
+		<p>
+			Esta es la pagina de contacto puedes enviarnos cualquier duda
+		</p>	
+	</div>
+
+	<!-- [hidden]="true" esta es una directiva con su valor por defecto de angular-->
+	<div id="example" #examples [hidden]="true">
+		<p>
+			Esta es la pagina de contacto puedes enviarnos cualquier duda
+		</p>	
+	</div>
+	
+
+
+	<br><br>
+
+	Tamaño del slider
+	<input type="number" [(ngModel)]="widthSlder" (keyup.enter)="cargarSlider()"/>
+	<button (click)="cargarSlider()"> Cargar Slider </button>
+	<button (click)="resetearSlider()"> Resetear Slider </button>
+
+	
+	<div *ngIf="anchuraToSlider">
+		<!-- pasar parametros de un componente a otro Padre-hijo -->
+		<!-- [name]="valor" -->
+		<!-- conseguirAutor es una variable de salida desde el hijo aap-slider, getAutor() es el que lo va a recibir $event le envio el evento que halla sucedido-->
+		<app-slider [anchura]="anchuraToSlider"
+					[etiquetas]="captions"
+					(conseguirAutor)="getAutor($event)"> </app-slider>
+	</div>
+	
+	<div *ngIf="autor">
+		{{autor.nombre +" "+ autor.website}}
+	</div>
+	
+	
+
+</div>

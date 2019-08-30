@@ -1,0 +1,20 @@
+<header>
+	<ul>
+		<!-- Con el [routerLinkActive] le agrego el estilo (src/assets/css/style - angular.json) "['actived']" cuando este en ese link -->
+	  <li> <a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']"> sobre mi </a> </li>
+	  <li> <a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']"> proyectos </a> </li>
+	  <li id="logo"> <a href="#"> JC </a> </li>
+	  <li> <a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']"> crear-proyecto </a> </li>
+	  <li> <a [routerLink]="['/contacto']" [routerLinkActive]="['actived']"> contacto </a> </li>
+	</ul>	
+</header>
+
+<section id="content">
+	<router-outlet></router-outlet>	
+</section>
+
+<footer>
+	Master en JavaScript
+</footer>
+
+
